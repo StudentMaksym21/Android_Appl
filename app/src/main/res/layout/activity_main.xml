@@ -1,15 +1,21 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <TextView
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_toggle" />
+
+    <Button
+        android:id="@+id/button_toggle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to MainActivity"
-        android:textSize="24sp"
-        android:layout_gravity="center" />
-</LinearLayout>
+        android:text="Toggle Fragment"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp" />
+</RelativeLayout>
