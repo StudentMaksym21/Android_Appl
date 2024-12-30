@@ -56,4 +56,26 @@ class CreateAccountActivity : AppCompatActivity() {
             finish()
         }
     }
+
+    private fun handleRegistration() {
+        val email = etEmail.text.toString()
+        val password = etPassword.text.toString()
+
+        if (!credentialsManager.isEmailValid(email)) {
+            etEmail.error = "Invalid email address"
+            return
+        }
+
+        if (!credentialsManager.isPasswordValid(password)) {
+            etPassword.error = "Password must be at least 4 characters"
+            return
+        }
+
+        if (credentialsManager.register(email, password)) {
+            Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
+            finish() // Go back to LoginActivity
+        } else {
+            etEmail.error = "Email is already registered"
+        }
+    }
 }

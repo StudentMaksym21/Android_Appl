@@ -69,4 +69,16 @@ class CredentialsManagerTest {
         val result = credentialsManager.register(email, password)
         assertFalse(result)
     }
+
+    @Test
+    fun testAuthenticateRegisteredUser() {
+        val result = credentialsManager.authenticate("test@te.st", "1234")
+        assertTrue(result)
+    }
+
+    @Test
+    fun testAuthenticateInvalidCredentials() {
+        val result = credentialsManager.authenticate("nonexistent@te.st", "wrong")
+        assertFalse(result)
+    }
 }

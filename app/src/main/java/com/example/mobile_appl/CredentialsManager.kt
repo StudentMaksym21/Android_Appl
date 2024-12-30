@@ -20,10 +20,16 @@ class CredentialsManager {
     }
 
     fun register(email: String, password: String): Boolean {
-        if (accounts.containsKey(email)) {
+        val normalizedEmail = email.lowercase()
+        if (accounts.containsKey(normalizedEmail)) {
             return false
         }
-        accounts[email] = password
+        accounts[normalizedEmail] = password
         return true
+    }
+
+    fun authenticate(email: String, password: String): Boolean {
+        val normalizedEmail = email.lowercase()
+        return accounts[normalizedEmail] == password
     }
 }

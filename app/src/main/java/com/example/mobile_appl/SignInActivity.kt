@@ -62,4 +62,25 @@ class SignInActivity : AppCompatActivity() {
             finish()
         }
     }
+
+    private fun handleLogin() {
+        val email = etEmail.text.toString()
+        val password = etPassword.text.toString()
+
+        if (!credentialsManager.isEmailValid(email)) {
+            etEmail.error = "Invalid email address"
+            return
+        }
+
+        if (!credentialsManager.isPasswordValid(password)) {
+            etPassword.error = "Invalid password"
+            return
+        }
+
+        if (credentialsManager.authenticate(email, password)) {
+            startActivity(Intent(this, MainActivity::class.java))
+        } else {
+            Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show()
+        }
+    }
 }
