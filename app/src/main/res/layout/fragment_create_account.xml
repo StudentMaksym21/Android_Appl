@@ -5,21 +5,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".CreateAccountActivity">
+    tools:context=".FragmentA">
 
     <TextView
         android:id="@+id/tvGetStarted"
-        style="@style/HeaderText"
-        android:text="@string/get_started"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Get Started" />
 
     <TextView
         android:id="@+id/tvCreateAccount"
-        style="@style/SubHeaderText"
-        android:text="@string/create_a_free_account"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Create a free account" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -27,8 +25,9 @@
         android:layout_marginTop="16dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etFullName"
-            style="@style/InputField"
-            android:hint="@string/full_name" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -37,8 +36,9 @@
         android:layout_marginTop="16dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
-            style="@style/InputField"
-            android:hint="@string/valid_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -48,8 +48,9 @@
         android:layout_marginTop="16dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPhoneNumber"
-            style="@style/InputField"
-            android:hint="@string/phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
             android:inputType="phone" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -59,31 +60,31 @@
         android:layout_marginTop="16dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPassword"
-            style="@style/InputField"
-            android:hint="@string/strong_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
         android:id="@+id/cbTerms"
-        style="@style/CheckBoxStyle"
-        android:text="@string/terms_and_conditions"
-        android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="I accept the terms and conditions" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnNext"
-        style="@style/ButtonStyle"
-        android:text="@string/next"
-        android:layout_marginTop="16dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Next" />
 
     <TextView
         android:id="@+id/tvLogIn"
-        style="@style/LinkText"
-        android:text="@string/already_member_log_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:text="Already have an account? Log in" />
 </LinearLayout>
