@@ -2,13 +2,8 @@ package com.example.mobile_appl
 
 import java.util.regex.Pattern
 
-class CredentialsManager {
-
-    // Custom email pattern
-    private val EMAIL_PATTERN = Pattern.compile(
-        "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
-    )
-
+object CredentialsManager {
+    private val EMAIL_PATTERN = Pattern.compile("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+")
     private val accounts: MutableMap<String, String> = mutableMapOf()
 
     fun isEmailValid(email: String): Boolean {

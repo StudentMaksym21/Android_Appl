@@ -5,21 +5,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".SignInActivity">
+    tools:context=".FragmentB">
 
     <TextView
         android:id="@+id/tvWelcome"
-        style="@style/HeaderText"
-        android:text="@string/welcome_back"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Welcome Back" />
 
     <TextView
         android:id="@+id/tvSignIn"
-        style="@style/SubHeaderText"
-        android:text="@string/sign_in_to_access_your_account"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Sign in to access your account" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilEmail"
@@ -28,8 +26,9 @@
         android:layout_marginTop="16dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
-            style="@style/InputField"
-            android:hint="@string/enter_your_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -40,34 +39,33 @@
         android:layout_marginTop="16dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPassword"
-            style="@style/InputField"
-            android:hint="@string/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
         android:id="@+id/cbRememberMe"
-        style="@style/CheckBoxStyle"
-        android:text="@string/remember_me"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Remember me" />
 
     <TextView
         android:id="@+id/tvForgotPassword"
-        style="@style/LinkText"
-        android:text="@string/forgot_password"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnNext"
-        style="@style/ButtonStyle"
-        android:text="@string/next" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next" />
 
     <TextView
         android:id="@+id/tvRegister"
-        style="@style/LinkText"
-        android:text="@string/new_member_register_now"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="New here? Register now" />
 </LinearLayout>
